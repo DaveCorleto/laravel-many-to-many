@@ -29,5 +29,5 @@ class Technologies extends Seeder
         $technologies -> type() -> associate($projects);
     
         $technologies -> save();
-    }
+    }); }
 }
