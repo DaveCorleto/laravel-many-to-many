@@ -5,6 +5,12 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
+use App\Models\Technology;
+use App\Models\Project;
+use App\Models\Type;
+
+
+
 class Technologies extends Seeder
 {
     /**
