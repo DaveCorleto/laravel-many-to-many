@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::table('projects', function (Blueprint $table) {
             $table->foreignId('type_id')->constrained();
         });
-        Schema::table('projects_technology', function (Blueprint $table) {
+        Schema::table('project_technology', function (Blueprint $table) {
             $table->foreignId('project_id')->constrained();
             $table->foreignId('technology_id')->constrained();
         });
@@ -30,9 +30,9 @@ return new class extends Migration
     public function down()
     {   
         Schema::table('projects', function (Blueprint $table) {
-        $table->dropForeign(['type_id']);
-        //per sicurezza puoi anche droppare la colonna, in questo modo:
-        $table->dropColumn('type_id'); 
+            $table->dropForeign(['type_id']);
+            //per sicurezza puoi anche droppare la colonna, in questo modo:
+            $table->dropColumn('type_id'); 
         });
     }
 };

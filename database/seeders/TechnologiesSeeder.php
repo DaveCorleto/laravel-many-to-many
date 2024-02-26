@@ -11,7 +11,7 @@ use App\Models\Type;
 
 
 
-class Technologies extends Seeder
+class TechnologiesSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -22,12 +22,13 @@ class Technologies extends Seeder
     {
         Technology :: factory()
         -> count(10)
-        -> make()
-        -> each(function($technologies) {
+        -> create()
+        -> each(function($technology) {
 
-        $projects = Type :: inRandomOrder() -> first();
-        $technologies -> type() -> associate($projects);
-    
-        $technologies -> save();
-    }); }
+            $projects = Project :: inRandomOrder() -> limit(2)-> get();
+            $technology -> projects() -> attach($projects);
+        
+            $technology -> save();
+        }); 
+    }
 }
