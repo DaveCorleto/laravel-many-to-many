@@ -5,9 +5,9 @@ use App\Http\Controllers\TypeController;
 use App\Http\Controllers\ProjectController;
 
 
-Route::get('/', [TypeController::Class, 'index'])-> name('type.index');
+Route::get('/', [TypeController::Class, 'index'])-> name('pages.type.index');
 
-Route::get('/projects', [ProjectController::Class, 'index'])-> name('project.index');
+Route::get('/projects', [ProjectController::Class, 'index'])-> name('pages.projects.index');
 
 // Route :: get('/', [UserController :: class, 'index'])
 //     -> name('user.index');
