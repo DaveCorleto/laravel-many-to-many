@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Type;
+use App\Models\Project;
 
 class TypeController extends Controller
 {
@@ -15,8 +16,10 @@ class TypeController extends Controller
     public function index()
     {
         $types = Type::all();
+        $projects = Project::all();
 
-        return view('pages.index', compact('types'));
+        // Percorso del file su disco 
+        return view('pages.types.index', compact('types','projects'));
     }
 
     /**

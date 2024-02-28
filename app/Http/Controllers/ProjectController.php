@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Type;
 use App\Models\Project;
+use App\Models\Technology;
 
 class ProjectController extends Controller
 {
@@ -17,8 +18,9 @@ class ProjectController extends Controller
     {
         $projects = Project :: all();
         $types = Type :: all();
+        $technologies= Technology :: all();
 
-        return view('pages.projects.index', compact('projects','types'));
+        return view('pages.projects.index', compact('projects','types','technologies'));
     }
 
     /**

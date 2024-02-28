@@ -5,13 +5,13 @@
 @section('content')
     <h1>Hello, World!</h1>
     <ul>
-        {{-- @foreach ($types as $type)
+        @foreach ($types as $type)
             <li>{{$type}}</li>
-        @endforeach --}}
+        @endforeach
         @foreach ($projects as $project)
         <li>Title: {{$project->title}} - Company: {{$project->title}}</li>
         
-         @endforeach
+        @endforeach
 
     </ul>
 @endsection
