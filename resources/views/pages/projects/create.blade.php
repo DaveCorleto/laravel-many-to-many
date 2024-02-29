@@ -6,7 +6,7 @@
 
     <h1>Ciao sono la create</h1>
 
-    <form action="Qui ci va la route" method="POST">
+    <form action="{{ route('qui ci andrà la store') }}" method="POST">
         @csrf
         @method('POST')
 
