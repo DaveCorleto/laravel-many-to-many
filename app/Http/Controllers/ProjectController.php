@@ -30,7 +30,11 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        //
+        $projects = Project :: all();
+        $types = Type :: all();
+        $technologies= Technology :: all();
+
+        return view('pages.projects.create', compact('projects','types','technologies'));
     }
 
     /**

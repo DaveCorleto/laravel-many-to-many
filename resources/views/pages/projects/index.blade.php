@@ -4,6 +4,7 @@
 @endsection
 @section('content')
     <h1>Eccomiiiiii sono pages.projects.index!</h1>
+    <a class="ms-3" href="{{route('projects.create')}}">CREA NUOVO</a>
     <ul>
         @foreach ($projects as $project)
         <li>Project Title: {{$project->title}} - Company: {{$project->title}}</li>
@@ -16,4 +17,7 @@
         @endforeach
 
     </ul>
+    
+
+    
 @endsection

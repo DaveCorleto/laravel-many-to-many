@@ -27,7 +27,7 @@ class TechnologiesSeeder extends Seeder
 
             $projects = Project :: inRandomOrder() -> limit(2)-> get();
             $technology -> projects() -> attach($projects);
-        
+            
             $technology -> save();
         }); 
     }
